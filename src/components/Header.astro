@@ -12,8 +12,8 @@ const path = Astro.url.pathname;
         <span class="brand-sub">Nilo Nature Forest Reserve</span>
       </span>
     </a>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
-    <label for="nav-toggle" class="burger" aria-label="Open menu"><span></span><span></span><span></span></label>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" tabindex="-1" aria-hidden="true" />
+    <label for="nav-toggle" class="burger"><span></span><span></span><span></span><span class="vh">Open menu</span></label>
     <nav class="primary" aria-label="Main navigation">
       {NAV.map((n) => (
         <a href={n.href} aria-current={path === n.href ? 'page' : undefined}>{n.label}</a>
