@@ -1,0 +1,85 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+import Plate from '../components/Plate.astro';
+import ResearchBox from '../components/ResearchBox.astro';
+import PlacementCta from '../components/PlacementCta.astro';
+import chameleon from '../assets/images/chameleon-trioceros-deremensis.jpg';
+import viper from '../assets/images/viper-atheris-ceratophora.jpg';
+import hyliota from '../assets/images/bird-hyliota-usambara.jpg';
+import tailorbird from '../assets/images/bird-artisornis-moreaui.jpg';
+import sunbird from '../assets/images/bird-hedydipna-pallidigaster.jpg';
+import owl from '../assets/images/owl-ketupa-vosseleri.jpg';
+import toad from '../assets/images/toad-nectophrynoides-tornieri.jpg';
+import butterfly from '../assets/images/butterfly-charaxes.jpg';
+---
+<Base
+  title="Fauna of the Nilo Forest Reserve, East Usambara"
+  description="Usambara three-horned chameleon, Angolan colobus and the East Usambara endemics: what is recorded at Nilo Nature Forest Reserve, Tanzania, and what a student project could confirm."
+>
+  <PageHead eyebrow="The wildlife of the East Usambaras" title="Fauna" lead="Around 100 bird species are recorded for Nilo, along with the Usambara three-horned chameleon and the Angolan black-and-white colobus. For most other East Usambara endemics, presence in the reserve has not been confirmed in recent years." />
+
+  <div class="section">
+    <div class="wrap">
+      <div class="split" style="margin-bottom:2.6rem">
+        <div class="prose">
+          <h2 style="margin-top:0">What is recorded, and what is not</h2>
+          <p>The East Usambara Mountains hold an unusual number of species found nowhere else. For the Nilo Nature Forest Reserve itself, the records we rely on are these: around 100 bird species, the Usambara three-horned chameleon (<em>Trioceros deremensis</em>) and the Angolan black-and-white colobus (<em>Colobus angolensis</em>).</p>
+          <p>The species shown below are East Usambara species. Some are documented for Nilo, others are known from Amani and neighbouring forests and are likely but not confirmed at Nilo. We mark the difference rather than hide it, because it is exactly the kind of gap a placement student can close.</p>
+        </div>
+        <div class="note">
+          <p><strong>Confirmed for Nilo:</strong> c. 100 bird species, Usambara three-horned chameleon, Angolan black-and-white colobus.</p>
+          <p><strong>To be confirmed:</strong> the East Usambara endemics below, marked "presence at Nilo unconfirmed". Presence and abundance at Nilo are open questions.</p>
+        </div>
+      </div>
+
+      <div class="plate-grid">
+        <Plate img={chameleon} alt="Usambara three-horned chameleon, Trioceros deremensis, a species of the Nilo Nature Forest Reserve, East Usambara" credit="© dmblokz · iNaturalist · CC BY-NC" name="Usambara three-horned chameleon" sci="Trioceros deremensis" iucn="LC" tags={[{ label: 'Eastern Arc endemic', endemic: true }, { label: 'Recorded at Nilo' }]}>
+          A large, forest-dwelling chameleon; males carry three prominent horns. The flagship reptile of the reserve and of these mountains.
+        </Plate>
+        <Plate img={viper} alt="Usambara bush viper, Atheris ceratophora, East Usambara Mountains, Tanzania" credit="© Bobby Bok · iNaturalist · CC BY-NC" name="Usambara bush viper" sci="Atheris ceratophora" iucn="VU" tags={[{ label: 'Usambara endemic', endemic: true }, { label: 'Presence at Nilo unconfirmed' }]}>
+          A small, arboreal viper with raised scales above the eyes, restricted to a few Tanzanian mountain forests.
+        </Plate>
+        <Plate img={hyliota} alt="Usambara hyliota, Hyliota usambara, endemic bird of the East Usambara Mountains" credit="© markus lilje · iNaturalist · CC BY-NC-ND" name="Usambara hyliota" sci="Hyliota usambara" iucn="EN" tags={[{ label: 'East Usambara endemic', endemic: true }, { label: 'Presence at Nilo unconfirmed' }]}>
+          One of Africa's rarest birds, confined to a few patches of East Usambara canopy.
+        </Plate>
+        <Plate img={tailorbird} alt="Long-billed tailorbird, Artisornis moreaui, East Usambara Mountains, Tanzania" credit="© Zein et Carlo · iNaturalist · CC BY-NC" name="Long-billed tailorbird" sci="Artisornis moreaui" iucn="CR" tags={[{ label: 'Tiny range', endemic: true }, { label: 'Presence at Nilo unconfirmed' }]}>
+          A tiny, elusive bird with one of the smallest ranges of any African species. Critically endangered.
+        </Plate>
+        <Plate img={sunbird} alt="Amani sunbird, Hedydipna pallidigaster, East Usambara Mountains, Tanzania" credit="© Alex · iNaturalist · CC BY-NC" name="Amani sunbird" sci="Hedydipna pallidigaster" iucn="EN" tags={[{ label: 'Eastern Arc and coastal', endemic: true }, { label: 'Presence at Nilo unconfirmed' }]}>
+          A canopy specialist of lowland and submontane forest.
+        </Plate>
+        <Plate img={owl} alt="Usambara eagle-owl, Ketupa vosseleri, East Usambara Mountains, Tanzania" credit="© Ewout Knoester · iNaturalist · CC BY-SA" name="Usambara eagle-owl" sci="Ketupa (Bubo) vosseleri" iucn="NE" iucnNote="Formerly assessed as Vulnerable; now treated by IUCN as a subspecies of Fraser's eagle-owl, Least Concern" tags={[{ label: 'Eastern Arc endemic', endemic: true }, { label: 'Presence at Nilo unconfirmed' }]}>
+          A large forest owl of the Eastern Arc, seldom seen and poorly known. Its taxonomic status is under revision.
+        </Plate>
+        <Plate img={toad} alt="Tornier's forest toad, Nectophrynoides tornieri, East Usambara Mountains, Tanzania" credit="© John Lyakurwa · iNaturalist · CC BY" name="Tornier's forest toad" sci="Nectophrynoides tornieri" iucn="LC" tags={[{ label: 'Eastern Arc endemic', endemic: true }, { label: 'Presence at Nilo unconfirmed' }]}>
+          A small toad of the leaf litter that gives birth to fully formed young rather than laying eggs.
+        </Plate>
+        <Plate img={butterfly} alt="Charaxes butterfly in East Usambara forest, Tanzania" credit="© Nigel Voaden · iNaturalist · CC BY" name="Forest butterflies" sci="Charaxes, Papilio and others" tags={[{ label: 'High diversity' }, { label: 'Little studied' }]}>
+          The Usambaras are a centre of butterfly diversity with many localised forms. No recent inventory exists for Nilo.
+        </Plate>
+        <article class="plate">
+          <div class="plate-img" style="display:flex;align-items:center;justify-content:center"><span class="small" style="text-align:center;padding:1rem;color:var(--moss)">Photo to follow<br /><span style="font-size:.6rem;letter-spacing:.1em;text-transform:uppercase">720 × 540 px</span></span></div>
+          <!-- TODO: Foto Angola-Stummelaffe (Colobus angolensis), 720x540 px, mit Lizenz/Credit -->
+          <div class="plate-body">
+            <h3>Angolan black-and-white colobus</h3>
+            <span class="sci">Colobus angolensis</span>
+            <p>A leaf-eating monkey of the canopy, living in groups. Recorded for Nilo; group sizes and ranging near the boundary are undocumented.</p>
+            <div class="plate-meta"><span class="tag">Recorded at Nilo</span><span class="tag">Canopy</span></div>
+          </div>
+        </article>
+      </div>
+      <div class="legend"><span>IUCN Red List:</span><span class="iucn CR">CR</span><span class="iucn EN">EN</span><span class="iucn VU">VU</span><span class="iucn NT">NT</span><span class="iucn LC">LC</span><span class="iucn NE">NE</span><span>NE: not evaluated as a species, see note on the plate.</span></div>
+
+      <ResearchBox questions={[
+        'Which of the East Usambara endemic birds recorded at Amani also occur at Nilo, and at what densities? Point counts and acoustic recording along elevational transects.',
+        'Herpetofauna baseline of the boundary zone: presence and elevational distribution of Trioceros deremensis, Atheris ceratophora and Nectophrynoides species.',
+        'Group size, composition and ranging of the Angolan black-and-white colobus in relation to distance from the reserve boundary.',
+        'Camera-trap inventory of medium-sized mammals, combined with snare mapping as a measure of hunting pressure.',
+        'Is the long-billed tailorbird present at Nilo? A targeted survey of suitable forest-edge and gap habitat.',
+      ]} />
+    </div>
+  </div>
+
+  <div class="section tint"><div class="wrap"><PlacementCta /></div></div>
+</Base>

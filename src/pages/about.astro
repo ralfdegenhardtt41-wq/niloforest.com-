@@ -1,0 +1,68 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+import { SITE, APPLY_HREF } from '../site';
+---
+<Base
+  title="About Friends of Nilo Forest – association and contact"
+  description="Friends of Nilo Forest is a Swiss conservation association in formation, founded by Ralf Degenhardt and Benjamin Wagner, for the Nilo Nature Forest Reserve in Tanzania. Contact and legal notice."
+>
+  <PageHead eyebrow="The association and contact" title="About us" lead="Friends of Nilo Forest is an association under Swiss law, in formation, based in Aesch ZH. Its only purpose is the protection of the Nilo Nature Forest Reserve in the East Usambara Mountains, Tanzania." />
+
+  <div class="section">
+    <div class="wrap split">
+      <div class="prose">
+        <h2 style="margin-top:0">How it started</h2>
+        <p>As operators of the Nilo Forest Lodge at the boundary of the reserve, we saw the pressures on the forest at first hand: cut stumps, snares, cleared edges, and a forest service with a mandate but little capacity. To work on that, we founded Friends of Nilo Forest.</p>
+        <p>The association is in formation. Its founders are Ralf Degenhardt and Benjamin Wagner. Until the founding is complete, we do not collect donations or membership fees and we have no bank account. What we do now is build the first monitoring of the reserve through <a href="/field-placement/">student field placements</a>.</p>
+        <h2>Founders</h2>
+        <div class="founders">
+          <div class="founder">
+            <div class="photo">Photo<br />Ralf Degenhardt<br />400 × 500 px</div>
+            <!-- TODO: Foto Ralf Degenhardt (Hochformat, 400x500 px) -->
+            <div><h4>Ralf Degenhardt</h4><p>Founder. Contact for placements, institutions and families. Switzerland and Tanzania.</p></div>
+          </div>
+          <div class="founder">
+            <div class="photo">Photo<br />Benjamin Wagner<br />400 × 500 px</div>
+            <!-- TODO: Foto Benjamin Wagner (Hochformat, 400x500 px) -->
+            <div><h4>Benjamin Wagner</h4><p>Co-founder.</p></div>
+          </div>
+        </div>
+        <h2>Contact</h2>
+        <p>For placements, institutional enquiries, questions from parents or press, write or call. There is no contact form; a direct e-mail is faster.</p>
+        <ul class="contact-lines">
+          <li><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
+          <li><a href={SITE.phoneHref}>{SITE.phone}</a> (Ralf Degenhardt, Switzerland)</li>
+        </ul>
+        <div style="margin-top:1.4rem;display:flex;gap:.8rem;flex-wrap:wrap">
+          <a class="btn btn-solid" href={APPLY_HREF}>Apply for a placement</a>
+          <a class="btn btn-line" href="/institutes/">For institutes</a>
+        </div>
+      </div>
+      <aside>
+        <div class="factsheet">
+          <span class="eyebrow">At a glance</span>
+          <dl>
+            <dt>Name</dt><dd>{SITE.name} (FONF)</dd>
+            <dt>Legal form</dt><dd>{SITE.legalForm}</dd>
+            <!-- TODO: nach Gründung — Handelsregister-Nummer, Statuten (PDF), Gründungsdatum -->
+            <dt>Seat</dt><dd>{SITE.address.locality}, {SITE.address.country}</dd>
+            <dt>Purpose</dt><dd>Protection of the Nilo Nature Forest Reserve, East Usambara Mountains, Tanzania</dd>
+            <dt>Founders</dt><dd>Ralf Degenhardt, Benjamin Wagner</dd>
+            <dt>E-mail</dt><dd><a href={`mailto:${SITE.email}`}>{SITE.email}</a></dd>
+            <dt>Phone</dt><dd><a href={SITE.phoneHref}>{SITE.phone}</a></dd>
+            <dt>Address</dt><dd>{SITE.address.street}<br />{SITE.address.postalCode} {SITE.address.locality}<br />{SITE.address.country}</dd>
+          </dl>
+        </div>
+        <div class="legal" id="legal">
+          <h3>Legal notice</h3>
+          <p>{SITE.name}, association in formation, {SITE.address.street}, {SITE.address.postalCode} {SITE.address.locality}, Switzerland. Responsible for content: Ralf Degenhardt. Contact: {SITE.email}.</p>
+          <h3>Privacy</h3>
+          <p>This website sets no cookies and uses no analytics. Fonts are loaded from Google Fonts, which transmits your IP address to Google. If you write to us, we store your e-mail and its contents for as long as needed to answer and, for applications, for the duration of the placement. We do not pass personal data to third parties. Legal basis: Swiss Federal Act on Data Protection (FADP). Requests for information or deletion: {SITE.email}.</p>
+          <h3>Photographs</h3>
+          <p>Species photographs are used under Creative Commons licences from iNaturalist contributors, credited on each image. Landscape photographs by Ralf Degenhardt.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</Base>

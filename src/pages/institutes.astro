@@ -1,0 +1,73 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+import { SITE } from '../site';
+---
+<Base
+  title="For institutes and research – Nilo as a field site"
+  description="Nilo Nature Forest Reserve, East Usambara, Tanzania, as a field site for thesis and internship projects: research gap compared with Amani, possible topics, infrastructure, data policy, contact."
+>
+  <PageHead eyebrow="For institutes and research" title="Nilo as a field site" lead="A 6,025-hectare Eastern Arc forest reserve with accommodation, full board, internet and a field partner at its boundary, and almost no current research presence. What a supervisor or placement coordinator needs to know." />
+
+  <div class="section">
+    <div class="wrap split">
+      <div class="prose">
+        <h2 style="margin-top:0">The research gap</h2>
+        <p>Amani, the neighbouring reserve, has a long research history and continuing scientific presence. Nilo, the second largest forest block of the East Usambaras, has almost none. The most recent comprehensive biodiversity survey we are aware of dates from 2002, by Frontier Tanzania. Since then, records for the reserve have not been systematically updated.</p>
+        <!-- TODO: Frontier-Tanzania-Erhebung 2002 (Technical Paper 53) bestätigen und ggf. Referenz ergänzen -->
+        <p>For a student that means two things. Baseline work of almost any kind is new, and can be published. And the comparison with Amani, a few kilometres away, gives every project a reference.</p>
+        <h2>Possible topics</h2>
+        <ul>
+          <li>Boundary monitoring design and the first years of incident data (conservation science, forestry).</li>
+          <li>Bird, herpetofauna and mammal baselines; presence of East Usambara endemics at Nilo (see <a href="/fauna/">fauna</a>).</li>
+          <li><em>Saintpaulia</em> populations, camphorwood regeneration, elevational zonation (see <a href="/flora/">flora</a>).</li>
+          <li>Catchment hydrology and erosion on cleared edges (see <a href="/geology/">geology</a>).</li>
+          <li>Drivers of logging, snaring and encroachment in the 17 surrounding villages (see <a href="/threats/">threats</a>).</li>
+          <li>Village forest monitors: recruitment, reporting routines, motivation (see <a href="/approach/">approach</a>).</li>
+        </ul>
+        <h2>Infrastructure</h2>
+        <ul>
+          <li>Forest Base at the reserve boundary: own room, three meals a day, electricity with solar backup, mobile broadband around 20 Mbps, laundry.</li>
+          <li>Saidi, local guide and site manager, as daily field partner. Swahili and basic English.</li>
+          <li>4×4 transport to Muheza by arrangement. Nearest medical care in Muheza.</li>
+          <li>Direct access to the reserve boundary on foot; access to the reserve with the research permit.</li>
+          <li>One or two participants at a time. Supervisors and small groups can stay in the main building.</li>
+        </ul>
+        <h2>Data policy</h2>
+        <p>Data belong to the student for academic use. Friends of Nilo Forest receives a copy so that the next participant can build on it and so that the association can use it for the protection of the reserve, in coordination with the Tanzania Forest Service. Publication rights rest with the student and the institution; we ask to be named as the host.</p>
+        <h2>Permits</h2>
+        <p>Research in Tanzania requires a permit from COSTECH, the Tanzania Commission for Science and Technology, and work inside the reserve requires clearance from the Tanzania Forest Service, which charges a daily research fee. The student applies with a short project description and a letter from the institution. We provide the site description and the local contacts.</p>
+      </div>
+      <aside>
+        <div class="factsheet">
+          <span class="eyebrow">Contact for institutions</span>
+          <dl>
+            <dt>Person</dt><dd>Ralf Degenhardt, founder</dd>
+            <dt>E-mail</dt><dd><a href={`mailto:${SITE.email}?subject=${encodeURIComponent('Nilo Forest field site – enquiry from institution')}`}>{SITE.email}</a></dd>
+            <dt>Phone</dt><dd><a href={SITE.phoneHref}>{SITE.phone}</a></dd>
+            <dt>Association</dt><dd>{SITE.name}, association in formation, {SITE.address.locality}, {SITE.address.country}</dd>
+          </dl>
+        </div>
+        <div class="card" style="margin-top:1.2rem">
+          <h3>Downloads</h3>
+          <div class="dl-list">
+            <a class="btn btn-line" href="/downloads/Nilo_Forest_Field_Placement.pdf">Announcement, English (PDF)</a>
+            <a class="btn btn-line" href="/downloads/Nilo_Forest_Feldaufenthalt_DE.pdf">Ausschreibung, Deutsch (PDF)</a>
+          </div>
+          <p class="small" style="margin-top:.8rem">May be forwarded to students and posted on placement lists.</p>
+        </div>
+        <div class="card" style="margin-top:1.2rem">
+          <h3>Conditions in brief</h3>
+          <ul style="font-size:.95rem;color:var(--ink-soft);margin:0">
+            <li>3 to 6 months, rolling start from {SITE.placementStart}</li>
+            <li>Final-year BSc or MSc, minimum age 21</li>
+            <li>USD 1,200 per month, full board</li>
+            <li>Supervision by the home institution</li>
+            <li>Two-week trial period</li>
+          </ul>
+          <a class="btn btn-solid" href="/field-placement/" style="margin-top:1rem">Field placement details</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</Base>

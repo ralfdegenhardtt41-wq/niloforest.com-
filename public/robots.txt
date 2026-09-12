@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /_deferred/
+
+Sitemap: https://niloforest.com/sitemap-index.xml

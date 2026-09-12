@@ -1,0 +1,40 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+import ResearchBox from '../components/ResearchBox.astro';
+import PlacementCta from '../components/PlacementCta.astro';
+---
+<Base
+  title="Our approach – monitoring through field placements"
+  description="Friends of Nilo Forest builds the first systematic boundary monitoring of the Nilo Nature Forest Reserve through successive student field placements, in coordination with the Tanzania Forest Service."
+>
+  <PageHead eyebrow="What Friends of Nilo Forest does" title="Our approach" lead="Friends of Nilo Forest is a Swiss association in formation with one purpose: to strengthen the protection of the Nilo Nature Forest Reserve. Our first instrument is monitoring, built by students, one placement after another." />
+
+  <div class="section">
+    <div class="wrap">
+      <div class="steps">
+        <div class="step"><span class="n">01</span><h3>Measure what is happening</h3><p>The rules to protect this forest exist. What is missing is knowledge of where and how fast logging, snaring and encroachment act. A boundary monitoring with GPS routes and incident logs provides that.</p></div>
+        <div class="step"><span class="n">02</span><h3>Build it with students</h3><p>Each placement adds a building block: routes, village monitors, a species baseline, a protocol. Each participant hands over to the next. The association keeps the data and the continuity.</p></div>
+        <div class="step"><span class="n">03</span><h3>Coordinate with the Tanzania Forest Service</h3><p>The Tanzania Forest Service manages the reserve. Our work is carried out in coordination with the Tanzania Forest Service and its ranger post in Amani. We do not replace the authority; we produce information it can use.</p></div>
+      </div>
+      <div class="dashed" style="margin-top:2.4rem">
+        <span class="eyebrow ochre">Where we fit</span>
+        <p>We complement the actors already working in this landscape; we do not want to replace them. Friends of Nilo Forest is small, has one forest and one instrument, and says so.</p>
+      </div>
+      <div class="prose" style="margin-top:2.6rem">
+        <h2>Why placements rather than volunteers</h2>
+        <p>Earlier we thought of separate volunteer roles: building, patrolling, organising. In practice all three belong in one place, the field placement. Setting up a base, walking the boundary and organising village monitors are the work of a three to six month stay by someone who documents it for a thesis and hands it over. That produces continuity; short volunteer stints do not.</p>
+        <p>The base is the Forest Base, the annex of the Nilo Forest Lodge at the reserve boundary. Details are on the <a href="/field-placement/">field placement</a> page.</p>
+      </div>
+
+      <ResearchBox title="Open topics in conservation practice" questions={[
+        'Design of a boundary monitoring protocol that can be handed over between successive students with minimal loss of comparability.',
+        'Effectiveness and motivation of village forest monitors: what reporting routine works over months, and what does not.',
+        'Data structures for long-term monitoring with minimal resources: open formats, offline collection, simple analysis.',
+        'Comparison with the monitoring history at Amani: what has been tried in the East Usambaras, and what applies to Nilo.',
+      ]} />
+    </div>
+  </div>
+
+  <div class="section tint"><div class="wrap"><PlacementCta /></div></div>
+</Base>

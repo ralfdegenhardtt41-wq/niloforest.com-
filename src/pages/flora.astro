@@ -1,0 +1,74 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+import Plate from '../components/Plate.astro';
+import ResearchBox from '../components/ResearchBox.astro';
+import PlacementCta from '../components/PlacementCta.astro';
+import violet from '../assets/images/plant-streptocarpus-ionanthus.jpg';
+import camphor from '../assets/images/tree-ocotea-usambarensis.jpg';
+import fern from '../assets/images/plant-cyathea.jpg';
+import orchid from '../assets/images/plant-orchid.jpg';
+import impatiens from '../assets/images/plant-impatiens.jpg';
+import allanblackia from '../assets/images/tree-allanblackia.jpg';
+---
+<Base
+  title="Flora of the Nilo Forest Reserve – Saintpaulia, camphorwood"
+  description="Around 800 plant species are recorded for the Nilo Nature Forest Reserve, East Usambara, including wild Saintpaulia. Vegetation zones, signature plants and open botanical questions for a thesis."
+>
+  <PageHead eyebrow="The plant world of the reserve" title="Flora" lead="Around 800 plant species are recorded for Nilo, including several Saintpaulia taxa, the wild relatives of the African violet. The elevational zonation of the forest from the boundary to Nilo Peak at 1,506 m has not been documented in recent years." />
+
+  <div class="section">
+    <div class="wrap">
+      <div class="prose">
+        <span class="eyebrow ochre">Vegetation by elevation</span>
+        <h2 style="margin-top:0">Four belts, undocumented at Nilo</h2>
+        <p>Rainfall, temperature and mist change with elevation, and the forest changes with them. In the East Usambaras the sequence below is typical. Where the belts lie at Nilo, and how sharply they separate, is one of the open questions for a placement.</p>
+      </div>
+      <div class="zones">
+        <div class="zone-scale" aria-hidden="true"></div>
+        <div>
+          <div class="zone"><span class="r">Upper submontane · ridge</span><h4>Ridge and mossy forest</h4><p>Cool, cloud-fed forest on the highest ground; trunks and branches thick with moss, ferns and epiphytic orchids.</p></div>
+          <div class="zone"><span class="r">Submontane · core belt</span><h4>Submontane rainforest</h4><p>The heart of the reserve: tall evergreen forest with camphorwood and other hardwoods.</p></div>
+          <div class="zone"><span class="r">Transitional</span><h4>Mid-elevation forest</h4><p>A rich transitional band where lowland and montane species overlap.</p></div>
+          <div class="zone"><span class="r">Lowland</span><h4>Foothill and lowland forest</h4><p>Warm, humid forest at the base of the range, most exposed to clearing and fire.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section tint">
+    <div class="wrap">
+      <div class="s-head"><span class="eyebrow">Signature plants</span><h2>Plants of the East Usambaras</h2><p class="lead">Species and groups typical of these forests. Apart from <em>Saintpaulia</em>, which is documented for Nilo, presence and abundance at Nilo are to be confirmed.</p></div>
+      <div class="plate-grid">
+        <Plate img={violet} alt="Wild African violet, Streptocarpus ionanthus (Saintpaulia), on a shaded rock face in the East Usambara Mountains" credit="© Joachim Louis · iNaturalist · CC BY-NC-ND" name="African violet" sci="Streptocarpus ionanthus (Saintpaulia)" tags={[{ label: 'Usambara origin', endemic: true }, { label: 'Recorded at Nilo' }]}>
+          The wild relative of the world's best-known houseplant grows on shaded rock faces in these mountains. Several taxa are recorded for Nilo.
+        </Plate>
+        <Plate img={camphor} alt="East African camphorwood, Ocotea usambarensis, a submontane forest tree of the East Usambara Mountains" credit="© andreaudzungwa · iNaturalist · CC BY-NC" name="East African camphorwood" sci="Ocotea usambarensis" tags={[{ label: 'Eastern Arc endemic', endemic: true }, { label: 'Targeted by logging' }]}>
+          A giant of the submontane forest and a prized timber, which is why it is a main target of illegal logging.
+        </Plate>
+        <Plate img={fern} alt="Tree fern, Cyathea, along a shaded stream in East Usambara forest, Tanzania" credit="© periskamau · iNaturalist · CC BY-NC" name="Tree ferns" sci="Cyathea spp." tags={[{ label: 'Streams' }, { label: 'Ancient lineage' }]}>
+          Along shaded streams and moist ravines, tree ferns give the forest its primeval character.
+        </Plate>
+        <Plate img={orchid} alt="Epiphytic orchid in the canopy of an East Usambara forest, Tanzania" credit="© wonderwalker · iNaturalist · CC BY-NC" name="Epiphytic orchids" sci="Orchidaceae, various" tags={[{ label: 'Epiphytic' }, { label: 'High diversity' }]}>
+          The humid canopy hosts a wealth of epiphytic orchids, a useful indicator group for forest integrity.
+        </Plate>
+        <Plate img={impatiens} alt="Forest balsam, Impatiens, in the understorey of an East Usambara forest, Tanzania" credit="© abcdefgewing · iNaturalist · CC BY-NC" name="Forest balsams" sci="Impatiens spp." tags={[{ label: 'Eastern Arc forms', endemic: true }, { label: 'Understorey' }]}>
+          Delicate herbs of the shaded understorey, with many local forms across the Eastern Arc.
+        </Plate>
+        <Plate img={allanblackia} alt="Allanblackia stuhlmannii, canopy tree of the East Usambara Mountains, Tanzania" credit="© andreaudzungwa · iNaturalist · CC BY-NC" name="Allanblackia" sci="Allanblackia stuhlmannii" tags={[{ label: 'Eastern Arc endemic', endemic: true }, { label: 'Canopy tree' }]}>
+          A tall canopy tree bearing large seed pods rich in edible fat.
+        </Plate>
+      </div>
+
+      <ResearchBox questions={[
+        'Mapping and micro-habitat of Saintpaulia populations at Nilo: rock faces, shade, moisture, distance to the boundary.',
+        'Regeneration of Ocotea usambarensis after selective logging: seedling and sapling densities in logged and unlogged plots.',
+        'Elevational zonation of the vegetation from the reserve boundary to Nilo Peak, using a series of plots along a transect.',
+        'Epiphyte and orchid diversity as an indicator of forest integrity, compared between edge and interior.',
+        'Invasive and pioneer species along the boundary and in gaps, and their spread into the reserve.',
+      ]} />
+    </div>
+  </div>
+
+  <div class="section"><div class="wrap"><PlacementCta /></div></div>
+</Base>

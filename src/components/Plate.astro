@@ -1,0 +1,31 @@
+---
+import { Image } from 'astro:assets';
+interface Props {
+  img: ImageMetadata;
+  alt: string;
+  credit: string;
+  name: string;
+  sci: string;
+  iucn?: string;
+  iucnNote?: string;
+  tags?: { label: string; endemic?: boolean }[];
+}
+const { img, alt, credit, name, sci, iucn, iucnNote, tags = [] } = Astro.props;
+---
+<article class="plate">
+  <div class="plate-img">
+    <Image src={img} alt={alt} width={720} height={540} loading="lazy" format="webp" quality={72} />
+    {iucn && <span class:list={['iucn', iucn]} title={iucnNote ?? `IUCN Red List: ${iucn}`}>{iucn}</span>}
+    <span class="credit">{credit}</span>
+  </div>
+  <div class="plate-body">
+    <h3>{name}</h3>
+    <span class="sci">{sci}</span>
+    <p><slot /></p>
+    {tags.length > 0 && (
+      <div class="plate-meta">
+        {tags.map((t) => <span class:list={['tag', { endemic: t.endemic }]}>{t.label}</span>)}
+      </div>
+    )}
+  </div>
+</article>

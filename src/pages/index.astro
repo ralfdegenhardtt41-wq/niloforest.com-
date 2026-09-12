@@ -1,0 +1,120 @@
+---
+import Base from '../layouts/Base.astro';
+import PlacementCta from '../components/PlacementCta.astro';
+import { Image } from 'astro:assets';
+import hero from '../assets/images/hero-nilo.jpg';
+import { SITE, RESERVE, APPLY_HREF } from '../site';
+
+const placeSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Place',
+  '@id': `${SITE.url}/#reserve`,
+  name: RESERVE.name,
+  alternateName: 'Nilo Forest Reserve',
+  description:
+    'Nature Forest Reserve of about 6,025 ha in the East Usambara Mountains, Tanzania, gazetted on 7 December 2007 under Tanzania\'s highest level of forest protection. Part of the Eastern Arc Mountains. Managed by the Tanzania Forest Service.',
+  geo: { '@type': 'GeoCoordinates', latitude: RESERVE.lat, longitude: RESERVE.lng },
+  address: { '@type': 'PostalAddress', addressRegion: 'Tanga Region', addressCountry: 'TZ' },
+  containedInPlace: { '@type': 'Place', name: 'East Usambara Mountains, Eastern Arc Mountains' },
+};
+---
+<Base
+  title="Nilo Nature Forest Reserve – Field placements for students"
+  description="Friends of Nilo Forest: Swiss association for the Nilo Nature Forest Reserve, East Usambara, Tanzania. Self-directed field placements for biology and conservation students."
+  schema={placeSchema}
+>
+  <div class="hero">
+    <div class="hero-media">
+      <Image src={hero} alt="Forested ridges of the Nilo Nature Forest Reserve, East Usambara Mountains, Tanzania, at dusk" width={1600} height={892} loading="eager" fetchpriority="high" format="webp" quality={70} />
+    </div>
+    <div class="hero-scrim" aria-hidden="true"></div>
+    <div class="hero-in">
+      <span class="eyebrow">Eastern Arc Mountains · Tanzania</span>
+      <h1>Nilo Forest <em>Reserve</em></h1>
+      <p class="lead">A 6,025-hectare nature forest reserve in the East Usambara Mountains, with almost no current research presence. Friends of Nilo Forest offers students a place to work here for three to six months.</p>
+      <div class="hero-cta">
+        <a class="btn btn-solid" href="/field-placement/">Field placement</a>
+        <a class="btn btn-ghost" href="/fauna/">The forest</a>
+      </div>
+    </div>
+    <div class="credit" aria-hidden="true">Photo: Ralf Degenhardt</div>
+  </div>
+
+  <div class="section">
+    <div class="wrap">
+      <PlacementCta />
+    </div>
+  </div>
+
+  <div class="section tint" style="padding-top:0">
+    <div class="wrap">
+      <div class="split">
+        <div class="prose">
+          <span class="eyebrow">What this forest is</span>
+          <h2>A protected forest with an open research gap</h2>
+          <p class="lead">The Nilo Nature Forest Reserve lies in the East Usambara Mountains in north-eastern Tanzania. It is the second largest forest block of the East Usambaras after Amani and part of the Eastern Arc Mountains, a chain of isolated mountain forests known for their high number of endemic species.</p>
+          <p>The reserve was gazetted on 7 December 2007 under Tanzania's highest level of forest protection and is managed by the Tanzania Forest Service. Records list around 800 plant species, including <em>Saintpaulia</em>, the wild relative of the African violet, and around 100 bird species. The Usambara three-horned chameleon and the Angolan black-and-white colobus live here. Rain falls in every month of the year, and the forest is the water catchment for more than 30,000 people in 17 villages.</p>
+          <p>The forest is under pressure from illegal logging, poaching and encroachment. Unlike Amani, Nilo has almost no current research or monitoring presence. That gap is what Friends of Nilo Forest works on, and it is what makes the reserve a useful field site for a student project.</p>
+        </div>
+        <div class="facts" style="grid-template-columns:1fr 1fr;align-self:center">
+          <div class="fact"><div class="v">6,025 ha</div><div class="k">Nature Forest Reserve since 7 December 2007</div></div>
+          <div class="fact"><div class="v">1,506 m</div><div class="k">Nilo Peak, highest point of the reserve</div></div>
+          <div class="fact"><div class="v">c. 800</div><div class="k">plant species recorded, including <em>Saintpaulia</em></div></div>
+          <div class="fact"><div class="v">c. 100</div><div class="k">bird species recorded</div></div>
+          <div class="fact"><div class="v">1,200–2,200 mm</div><div class="k">annual rainfall, rain in every month</div></div>
+          <div class="fact"><div class="v">17 villages</div><div class="k">more than 30,000 people depend on its water</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="wrap">
+      <div class="pillars">
+        <div class="pillar">
+          <span class="n">For students</span>
+          <h3>Build the first monitoring</h3>
+          <p>There is no existing programme at Nilo. The placement is to design and run the first systematic monitoring of the reserve boundary, with a local field partner, and to leave a protocol the next person can take over. Data stay with you for your thesis.</p>
+          <a href="/field-placement/">Field placement</a>
+        </div>
+        <div class="pillar">
+          <span class="n">For institutes</span>
+          <h3>A field site without a queue</h3>
+          <p>Accommodation, full board, internet and a field partner directly at the reserve boundary. Supervision stays with the home institution. Open questions in ecology, botany, herpetology, hydrology and conservation practice.</p>
+          <a href="/institutes/">For institutes and research</a>
+        </div>
+        <div class="pillar">
+          <span class="n">For families</span>
+          <h3>Who is behind this</h3>
+          <p>Two named founders, a Swiss postal address, a telephone number, staff on site, a simple house with its own room, and clear conditions. Everything you may want to check before a son or daughter travels is listed in one place.</p>
+          <a href="/field-placement/#credibility">Who we are and what you can check</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section tint">
+    <div class="wrap">
+      <div class="s-head">
+        <span class="eyebrow">The forest</span>
+        <h2>Fauna, flora, geology, threats</h2>
+        <p class="lead">Four short pages on what is known about the reserve and, more importantly for a placement, what is not.</p>
+      </div>
+      <div class="cards">
+        <a class="card" href="/fauna/" style="text-decoration:none"><h3>Fauna</h3><p>Three-horned chameleon, Angolan colobus, and the East Usambara endemics whose presence in Nilo is still to be confirmed.</p></a>
+        <a class="card" href="/flora/" style="text-decoration:none"><h3>Flora</h3><p>Around 800 plant species, the wild African violet, camphorwood, and an undocumented elevational zonation.</p></a>
+        <a class="card" href="/geology/" style="text-decoration:none"><h3>Geology</h3><p>Precambrian basement, block-faulting and a stable climate: why the Eastern Arc holds so many endemics.</p></a>
+        <a class="card" href="/threats/" style="text-decoration:none"><h3>Threats</h3><p>Illegal logging, poaching and encroachment, and why nobody currently measures them at Nilo.</p></a>
+      </div>
+    </div>
+  </div>
+
+  <script is:inline>
+    // Redirect links from the previous single-page version (#/fauna etc.)
+    (function () {
+      var map = { '/fauna': '/fauna/', '/flora': '/flora/', '/geologie': '/geology/', '/bedrohungen': '/threats/', '/ansatz': '/approach/', '/zoos': '/institutes/', '/mitwirken': '/field-placement/', '/kontakt': '/about/' };
+      var h = location.hash.replace(/^#/, '');
+      if (h && map[h]) location.replace(map[h]);
+    })();
+  </script>
+</Base>

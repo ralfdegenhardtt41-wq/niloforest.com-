@@ -1,0 +1,25 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Page not found" description="The page you requested does not exist." noindex>
+  <div class="section">
+    <div class="wrap narrow">
+      <span class="eyebrow">404</span>
+      <h1 style="font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:.5em">Page not found</h1>
+      <p class="lead">The address may have changed. The site was restructured in September 2026.</p>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/field-placement/">Field placement</a></li>
+        <li><a href="/institutes/">For institutes</a></li>
+        <li><a href="/about/">About and contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <script is:inline>
+    (function () {
+      var map = { '/fauna': '/fauna/', '/flora': '/flora/', '/geologie': '/geology/', '/bedrohungen': '/threats/', '/ansatz': '/approach/', '/zoos': '/institutes/', '/mitwirken': '/field-placement/', '/kontakt': '/about/' };
+      var h = location.hash.replace(/^#/, '');
+      if (h && map[h]) location.replace(map[h]);
+    })();
+  </script>
+</Base>

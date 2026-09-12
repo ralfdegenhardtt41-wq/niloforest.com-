@@ -1,0 +1,13 @@
+---
+interface Props { title?: string; questions: string[] }
+const { title = 'Research questions and open topics', questions } = Astro.props;
+---
+<aside class="research" aria-labelledby="research-heading">
+  <span class="eyebrow">For a thesis or placement project</span>
+  <h2 id="research-heading">{title}</h2>
+  <ol>
+    {questions.map((q) => <li>{q}</li>)}
+  </ol>
+  <p class="small" style="margin-bottom:1rem">None of these questions has been worked on at Nilo in recent years. A placement student can take one of them as the core of a thesis project, or propose another one.</p>
+  <a class="link" href="/field-placement/">Field placement at Nilo Forest</a>
+</aside>

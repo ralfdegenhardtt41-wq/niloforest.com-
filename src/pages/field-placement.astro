@@ -1,0 +1,415 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE, RESERVE, APPLY_HREF } from '../site';
+
+const programSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'EducationalOccupationalProgram',
+  name: 'Self-directed conservation field placement, Nilo Nature Forest Reserve',
+  description:
+    'Three to six month self-directed field placement for final-year BSc and MSc students in biology, environmental, forestry and conservation sciences. The participant designs and runs the first systematic boundary monitoring of the Nilo Nature Forest Reserve, East Usambara Mountains, Tanzania. Data remain with the participant for thesis use.',
+  provider: { '@id': `${SITE.url}/#organization` },
+  url: `${SITE.url}/field-placement/`,
+  programType: 'Field placement',
+  educationalProgramMode: 'onsite',
+  timeToComplete: 'P3M',
+  occupationalCategory: 'Conservation biology, ecology, forestry',
+  programPrerequisites: 'Final-year BSc or MSc student in biology, environmental, forestry or conservation sciences. Minimum age 21. Physically fit. Basic English.',
+  educationalCredentialAwarded: 'None. Thesis supervision remains with the home institution.',
+  applicationStartDate: undefined,
+  offers: {
+    '@type': 'Offer',
+    price: '1200',
+    priceCurrency: 'USD',
+    description: 'Contribution per month, full board, Forest Base single occupancy',
+    availability: 'https://schema.org/InStock',
+  },
+  location: {
+    '@type': 'Place',
+    name: 'Forest Base, Nilo Nature Forest Reserve boundary',
+    address: { '@type': 'PostalAddress', addressLocality: 'Misalai, Amani Division, Muheza District', addressRegion: 'Tanga Region', addressCountry: 'TZ' },
+  },
+};
+
+const faq = [
+  {
+    q: 'Do I need a visa?',
+    a: 'Yes. Most nationalities can apply for a Tanzanian visa online before travelling. For a stay of three to six months with research activities, check the correct visa class with the Tanzanian immigration authority or embassy; a tourist visa does not cover research. We will confirm the current requirements with you before you book anything.',
+  },
+  {
+    q: 'Do I need a research permit?',
+    a: 'Yes. Research in Tanzania requires a permit from COSTECH, the Tanzania Commission for Science and Technology, and work inside the reserve requires clearance from the Tanzania Forest Service, which also charges a daily research fee. Applying takes several weeks and needs a short project description and a letter from your institution. You apply yourself; we provide the site description and the local contacts. Cost of the permit and fees is not included in the contribution.',
+  },
+  {
+    q: 'How do I get there?',
+    a: 'Fly to Dar es Salaam or Kilimanjaro, then travel overland to Muheza in Tanga Region. From the tarmac road the last stretch to the Forest Base is about 1 hour 45 minutes on a rough track and needs a 4×4. We arrange the transfer from Muheza or Tanga by agreement; transfer costs are not included in the contribution.',
+  },
+  {
+    q: 'How safe is the site?',
+    a: 'The Forest Base is next to the main lodge building and is staffed. Saidi, the site manager, lives nearby and is your daily field partner. The site is remote: there are no shops, and the nearest medical care is in Muheza. Mobile network and internet work at the house. You will not be alone at the site, and you will not walk in the forest alone during the first weeks. We tell families exactly who is there and how to reach the site.',
+  },
+  {
+    q: 'What is the climate like?',
+    a: 'Humid submontane forest. Rain falls in every month, 1,200 to 2,200 mm a year, with the heaviest rains usually between March and May. Temperatures are mild at this altitude. Expect wet boots, steep terrain and four to six hours of walking on field days.',
+  },
+  {
+    q: 'Is malaria a risk?',
+    a: 'Tanzania is a malaria country and the site lies in a malaria area. Discuss prophylaxis and vaccinations with a travel clinic before departure. Bring a mosquito net if your doctor advises it; rooms have nets. Malaria is one of the reasons the nearest clinic in Muheza matters, and one of the reasons we ask for a two-week trial period.',
+  },
+  {
+    q: 'What is the internet like?',
+    a: 'Mobile broadband at the house, around 20 Mbps, which is enough for video calls with your supervisor, uploading data and streaming. Grid electricity with solar backup. Outages happen; plan for them.',
+  },
+  {
+    q: 'Who does the laundry and cooking?',
+    a: 'Lodge staff. Full board means three meals a day, drinking water, electricity, internet and laundry. You do not need to shop or cook.',
+  },
+  {
+    q: 'Can I come alone?',
+    a: 'Yes. Most placements will be single. You have your own room in the Forest Base, staff are on site, and Saidi works with you every field day. Places are limited to one or two participants at a time.',
+  },
+  {
+    q: 'Can I bring a partner or companion?',
+    a: 'Yes. The Forest Base rate with a companion is USD 1,800 per month full board. The companion has no work obligation and no data rights under the placement; the placement, the project and the data are yours.',
+  },
+  {
+    q: 'Who supervises my work?',
+    a: 'Your home institution. Friends of Nilo Forest does not provide academic supervision. We provide the site, the field partner, the local context and a copy of any earlier protocols. Before you come, we ask for the name of your supervisor and a one-page project sketch.',
+  },
+  {
+    q: 'What if it does not work out?',
+    a: 'The first two weeks are a trial period. If either side ends the placement then, the remaining contribution is refunded. After the trial period, cancellation terms are agreed in writing before the start.',
+  },
+  {
+    q: 'Can my family visit?',
+    a: 'Yes. Relatives, supervisors and small groups can stay in the main lodge building during the placement. Student rates apply only to the Forest Base; the main building is charged at the rates listed under accommodation. The lodge is open all year.',
+  },
+  {
+    q: 'What does the placement cost compared with studying in Switzerland?',
+    a: 'Living costs for a student in Zürich are commonly estimated at around CHF 2,000 to 2,500 per month for rent, food, insurance and transport. The placement contribution of USD 1,200 per month includes accommodation, three meals a day, water, electricity, internet, laundry and a field partner. Travel, visa, insurance, research permit and transfers come on top and typically add a one-off amount of a few thousand francs for the whole stay. For most students the monthly cost on site is below the monthly cost at home; the total depends on flights and permit fees.',
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+---
+<Base
+  title="Field placement Nilo Forest – Thesis fieldwork in Tanzania"
+  description="Self-directed 3–6 month conservation field placement at the Nilo Nature Forest Reserve, East Usambara, Tanzania. For final-year BSc and MSc students. Full board, field partner, data for your thesis."
+  schema={[programSchema, faqSchema]}
+>
+  <div class="section dark" style="padding-bottom:clamp(2.5rem,6vh,4rem)">
+    <div class="wrap">
+      <span class="eyebrow">Self-directed conservation field placement · 3 to 6 months</span>
+      <h1 style="font-size:clamp(2.4rem,5.5vw,4rem);margin:0 0 .4em;max-width:18ch">Field placement at the Nilo Nature Forest Reserve</h1>
+      <p class="lead" style="max-width:62ch">You design and run the first systematic monitoring of a 6,025-hectare forest reserve in Tanzania's East Usambara Mountains, with a local field partner, and keep the data for your thesis. For final-year BSc and MSc students in biology, environmental, forestry and conservation sciences.</p>
+      <div class="hero-cta">
+        <a class="btn btn-solid" href={APPLY_HREF}>Apply by e-mail</a>
+        <a class="btn btn-ghost" href="#rates">Accommodation and contribution</a>
+      </div>
+      <p class="small" style="margin-top:1.6rem;color:rgba(245,243,234,.6)">Placements from {SITE.placementStart}, rolling intake, one or two participants at a time. Applications to {SITE.email}.</p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <nav class="toc" aria-label="On this page">
+      <a href="#site">The site</a>
+      <a href="#placement">The placement</a>
+      <a href="#provided">What is provided</a>
+      <a href="#conditions">Conditions</a>
+      <a href="#rates">Accommodation and contribution</a>
+      <a href="#apply">How to apply</a>
+      <a href="#faq">Questions and answers</a>
+      <a href="#credibility">Who we are</a>
+      <a href="#institutes">For institutes</a>
+    </nav>
+  </div>
+
+  <div class="section" id="site">
+    <div class="wrap split">
+      <div class="prose">
+        <span class="eyebrow">The site</span>
+        <h2>Nilo Nature Forest Reserve</h2>
+        <p>Nilo is a Nature Forest Reserve of about 6,025 ha, gazetted on 7 December 2007 under Tanzania's highest level of forest protection. It is the second largest forest block of the East Usambaras after Amani and part of the Eastern Arc Mountains. Nilo Peak, at 1,506 m, is the highest point of the East Usambaras. Rain falls in every month, 1,200 to 2,200 mm a year.</p>
+        <p>Records include around 800 plant species with several <em>Saintpaulia</em> taxa, around 100 bird species, the Usambara three-horned chameleon and the Angolan black-and-white colobus. The forest is the water catchment for more than 30,000 people in 17 villages. It is managed by the Tanzania Forest Service with limited enforcement capacity; illegal logging, poaching and encroachment are the main pressures.</p>
+        <p>Compared with Amani, Nilo has almost no recent research or monitoring presence. More on the forest: <a href="/fauna/">fauna</a>, <a href="/flora/">flora</a>, <a href="/geology/">geology</a>, <a href="/threats/">threats</a>.</p>
+      </div>
+      <div class="factsheet">
+        <span class="eyebrow">Location</span>
+        <dl>
+          <dt>Base</dt><dd>Forest Base at the reserve boundary, near Misalai, Amani Division, Muheza District, Tanga Region</dd>
+          <dt>Access</dt><dd>1 h 45 min of rough track from the tarmac road, 4×4 required</dd>
+          <dt>Nearest town</dt><dd>Muheza, with medical care</dd>
+          <dt>Forest access</dt><dd>On foot from the house</dd>
+          <dt>Managed by</dt><dd>{RESERVE.manager}. Work at the reserve is coordinated with the Tanzania Forest Service.</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+
+  <div class="section tint" id="placement">
+    <div class="wrap">
+      <div class="s-head">
+        <span class="eyebrow">The placement</span>
+        <h2>There is no programme. The task is to build one.</h2>
+        <p class="lead">You design and run, with a local field partner, the first systematic monitoring of the reserve boundary zone. The building blocks below are expected; how they are shaped follows your own proposal.</p>
+      </div>
+      <div class="cards">
+        <div class="card"><span class="n">01 · Patrol routes</span><h3>Boundary routes and incident log</h3><p>Routes along the boundary and into the reserve, recorded by GPS, with incident logging: cut stumps, snares, charcoal pits, encroachment.</p></div>
+        <div class="card"><span class="n">02 · Village monitors</span><h3>Two village forest monitors</h3><p>Recruit and train two monitors from neighbouring villages and set up a simple reporting routine they can keep going after you leave.</p></div>
+        <div class="card"><span class="n">03 · Baseline records</span><h3>Species baseline</h3><p>Camera traps, transects, acoustic recording or herpetology surveys, depending on the skills and equipment you bring. The <a href="/fauna/">fauna</a> and <a href="/flora/">flora</a> pages list open questions.</p></div>
+        <div class="card"><span class="n">04 · Handover</span><h3>Protocol and data structure</h3><p>A field protocol and a data structure the next participant can take over. This is the part that makes the placement more than a single project.</p></div>
+      </div>
+      <div class="note" style="margin-top:1.6rem;max-width:none">
+        <p><strong>Data rights.</strong> Data belong to you for academic use, with a copy to Friends of Nilo Forest so that the next participant can build on it. Thesis projects at BSc or MSc level are welcome; supervision must come from your home institution.</p>
+        <p><strong>Authorities.</strong> Working-level contact with the Tanzania Forest Service ranger post in Amani is part of the placement. You do not negotiate agreements with authorities; that stays with the association.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="provided">
+    <div class="wrap split">
+      <div>
+        <span class="eyebrow">What is provided</span>
+        <h2 style="font-size:clamp(1.8rem,3.2vw,2.5rem);margin-bottom:1rem">Forest Base, full board, field partner</h2>
+        <ul style="max-width:60ch">
+          <li><strong>Forest Base.</strong> A simple house next to the main lodge building, your own room. Direct access to the reserve boundary on foot.</li>
+          <li><strong>Full board</strong> prepared by lodge staff: three meals a day, drinking water.</li>
+          <li><strong>Saidi</strong>, local guide and site manager, as your daily field partner. Swahili and basic English.</li>
+          <li><strong>Internet</strong>, mobile broadband around 20 Mbps. Grid electricity with solar backup. Laundry.</li>
+          <li><strong>4×4 transport</strong> to Muheza by arrangement.</li>
+          <li><strong>Access</strong> to the reserve boundary and, with the permit, to the reserve.</li>
+        </ul>
+      </div>
+      <div id="conditions">
+        <span class="eyebrow">Conditions</span>
+        <h2 style="font-size:clamp(1.8rem,3.2vw,2.5rem);margin-bottom:1rem">Remote, steep, wet</h2>
+        <ul style="max-width:60ch">
+          <li><strong>Remote site.</strong> 1 h 45 min of rough track from the tarmac road, no shops, nearest medical care in Muheza. Humid climate, steep terrain, four to six hours of walking on field days.</li>
+          <li><strong>Minimum age 21</strong>, physically fit, basic English required. Swahili and previous fieldwork abroad are an advantage.</li>
+          <li><strong>Application</strong> with a one-page project sketch: what you would build in your time here, and how.</li>
+          <li><strong>Two-week trial period.</strong> The remaining contribution is refunded if either side ends the placement then.</li>
+          <li><strong>Travel, visa, insurance, research permit and transfers</strong> are your responsibility and are not included.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section tint" id="rates">
+    <div class="wrap">
+      <div class="s-head">
+        <span class="eyebrow">Accommodation and contribution</span>
+        <h2>Student rates, Forest Base</h2>
+        <p class="lead">The accommodation is the Nilo Forest Lodge. Placement students stay in the Forest Base, the lodge's annex. Description and photographs of the lodge are on <a href={SITE.lodgeUrl} target="_blank" rel="noopener">niloforestlodge.com</a>. Special conditions apply to placement students; regular rates are on niloforestlodge.com.</p>
+      </div>
+      <div class="table-wrap">
+        <table class="rates">
+          <caption>Forest Base, per month, full board</caption>
+          <thead><tr><th>Occupancy</th><th class="num">Contribution per month</th></tr></thead>
+          <tbody>
+            <tr><td>Forest Base, single occupancy</td><td class="num">USD 1,200</td></tr>
+            <tr><td>Forest Base, with companion <sup>1</sup></td><td class="num">USD 1,800</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small"><sup>1</sup> The companion has no work obligation and no data rights under the placement. For stays shorter than one month in the Forest Base a daily rate of USD 40 applies. The contribution is not negotiable.</p>
+
+      <div class="table-wrap" style="margin-top:2rem">
+        <table class="rates secondary">
+          <caption>Main building, for visits by relatives, supervisors and groups</caption>
+          <thead><tr><th>Occupancy</th><th class="num">Per month, full board</th></tr></thead>
+          <tbody>
+            <tr><td>Single occupancy</td><td class="num">USD 1,800</td></tr>
+            <tr><td>Double occupancy</td><td class="num">USD 2,400</td></tr>
+            <tr><td>Three persons, third on the sofa bed</td><td class="num">USD 3,000</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small" style="max-width:70ch">Relatives can visit the student in the main building during the placement. Shorter visits are charged at the regular rates on niloforestlodge.com.</p>
+
+      <div class="incl" style="margin-top:2.4rem">
+        <div class="card">
+          <h3>Included</h3>
+          <ul>
+            <li>Own room in the Forest Base</li>
+            <li>Three meals a day and drinking water</li>
+            <li>Electricity with solar backup</li>
+            <li>Internet, around 20 Mbps</li>
+            <li>Laundry</li>
+            <li>Saidi as field partner on field days</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Not included</h3>
+          <ul>
+            <li>International and domestic travel</li>
+            <li>Visa</li>
+            <li>Health, accident and liability insurance</li>
+            <li>Research permit (COSTECH) and Tanzania Forest Service fees</li>
+            <li>Transfers from Muheza or Tanga</li>
+            <li>Personal field equipment</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="apply">
+    <div class="wrap split">
+      <div class="prose">
+        <span class="eyebrow">How to apply</span>
+        <h2>One page is enough</h2>
+        <p>Send an e-mail to <a href={APPLY_HREF}>{SITE.email}</a> with the subject "{SITE.applySubject}" and a one-page project sketch as PDF. The sketch should cover:</p>
+        <ol>
+          <li>Who you are: programme, semester, institution, planned degree.</li>
+          <li>What you would build in three to six months at Nilo, and how. One building block in depth is better than all four in outline.</li>
+          <li>What skills and equipment you bring: GPS, camera traps, acoustic recorders, herpetology, botany, GIS, Swahili.</li>
+          <li>Your preferred time window and the name of a possible supervisor at your institution.</li>
+          <li>Previous fieldwork, if any.</li>
+        </ol>
+        <p>We reply within two weeks. If the sketch fits, we arrange a video call, then a written agreement with dates, contribution, trial period and cancellation terms. You apply for the permit and visa after that, with our support.</p>
+      </div>
+      <div>
+        <div class="callout" style="flex-direction:column;align-items:flex-start">
+          <div>
+            <span class="eyebrow">Apply</span>
+            <h3>Send your project sketch</h3>
+            <p>{SITE.email}</p>
+          </div>
+          <a class="btn btn-solid" href={APPLY_HREF}>Apply by e-mail</a>
+        </div>
+        <div class="dl-list" style="margin-top:1.2rem">
+          <a class="btn btn-line" href="/downloads/Nilo_Forest_Field_Placement.pdf">Download announcement (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section tint" id="faq">
+    <div class="wrap">
+      <div class="s-head">
+        <span class="eyebrow">Questions and answers</span>
+        <h2>What students and parents ask</h2>
+      </div>
+      <div class="faq">
+        {faq.map((f) => (
+          <details>
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="credibility">
+    <div class="wrap">
+      <div class="s-head">
+        <span class="eyebrow">Who we are and what you can check</span>
+        <h2>Two founders, one forest, an address and a phone number</h2>
+        <p class="lead">Friends of Nilo Forest is a small Swiss association in formation. Here is what stands behind the placement and how to verify it.</p>
+      </div>
+      <div class="cred">
+        <div class="card">
+          <h3>Founders</h3>
+          <div class="founders">
+            <div class="founder">
+              <div class="photo">Photo<br />Ralf Degenhardt<br />400 × 500 px</div>
+              <!-- TODO: Foto Ralf Degenhardt (Hochformat, 400x500 px, WebP) -->
+              <div><h4>Ralf Degenhardt</h4><p>Founder. Contact for placements, applications and families.</p></div>
+            </div>
+            <div class="founder">
+              <div class="photo">Photo<br />Benjamin Wagner<br />400 × 500 px</div>
+              <!-- TODO: Foto Benjamin Wagner (Hochformat, 400x500 px, WebP) -->
+              <div><h4>Benjamin Wagner</h4><p>Co-founder.</p></div>
+            </div>
+          </div>
+          <p style="margin-top:1.2rem">As operators of the Nilo Forest Lodge at the reserve boundary, we saw the pressures on the forest at first hand. Friends of Nilo Forest was founded to work on its protection. The association's only purpose is the Nilo Nature Forest Reserve.</p>
+        </div>
+        <div class="card">
+          <h3>Legal form and contact</h3>
+          <ul class="contact-lines">
+            <li><strong>{SITE.name}</strong></li>
+            <li>{SITE.legalForm}</li>
+            <!-- TODO: nach Gründung — Handelsregister-Eintrag und Statuten als PDF verlinken -->
+            <li>{SITE.address.street}, {SITE.address.postalCode} {SITE.address.locality}, {SITE.address.country}</li>
+            <li><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
+            <li><a href={SITE.phoneHref}>{SITE.phone}</a> (Ralf Degenhardt, Switzerland)</li>
+          </ul>
+          <p class="small" style="margin-top:1rem">Parents and supervisors are welcome to call. We answer questions about the site, the staff and the conditions before any application is made.</p>
+        </div>
+        <div class="card">
+          <h3>Safety and site</h3>
+          <ul style="font-size:.95rem;color:var(--ink-soft);margin:0">
+            <li>Staffed site: lodge staff and Saidi, the site manager, are present. Students are not alone at the base.</li>
+            <li>Nearest medical care in Muheza; Tanga, the regional capital, is about 2.5 hours away by road.</li>
+            <li>Mobile network and internet at the house; a 4×4 vehicle is available by arrangement.</li>
+            <li>Malaria area; prophylaxis and travel insurance with repatriation cover are required.</li>
+            <li>No walking in the forest alone during the first weeks; fieldwork is done with the field partner.</li>
+            <li>Two-week trial period on both sides.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Forest Base and surroundings</h3>
+          <div class="photo-grid">
+            <div class="photo-ph">Forest Base, exterior<br />1200 × 900 px</div>
+            <div class="photo-ph">Student room<br />1200 × 900 px</div>
+            <div class="photo-ph">Kitchen and meals<br />1200 × 900 px</div>
+            <div class="photo-ph">Access track<br />1200 × 900 px</div>
+            <div class="photo-ph">Reserve boundary<br />1200 × 900 px</div>
+            <div class="photo-ph">Field partner Saidi<br />1200 × 900 px</div>
+          </div>
+          <!-- TODO: sechs Fotos Forest Base (Aussen, Zimmer, Küche, Zufahrt, Reservatsgrenze, Saidi), je 1200x900 px, in src/assets/images/base/ -->
+          <p class="small" style="margin-top:.8rem">Photographs of the main lodge building are on <a href={SITE.lodgeUrl} target="_blank" rel="noopener">niloforestlodge.com</a>.</p>
+        </div>
+      </div>
+
+      <!-- TODO: Referenzen — Abschnitt wird sichtbar geschaltet, sobald erste Institute oder Absolventen zitiert werden können. -->
+      <section class="card" id="references" hidden style="margin-top:1.6rem">
+        <h3>References</h3>
+        <div class="cards">
+          <div>
+            <h4 style="font-size:1.15rem;margin:0 0 .4rem">Institutions that know the site</h4>
+            <ul style="font-size:.95rem;color:var(--ink-soft)">
+              <li>[Institute, university, contact person, what they can confirm]</li>
+            </ul>
+          </div>
+          <div>
+            <h4 style="font-size:1.15rem;margin:0 0 .4rem">Placement reports</h4>
+            <ul style="font-size:.95rem;color:var(--ink-soft)">
+              <li>[Name, programme, institution, dates, two or three sentences, link to thesis if public]</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div class="section tint" id="institutes">
+    <div class="wrap split">
+      <div class="prose">
+        <span class="eyebrow">For institutes</span>
+        <h2>What a supervisor needs to know</h2>
+        <ul>
+          <li><strong>Supervision</strong> remains with the home institution. Friends of Nilo Forest provides the site, logistics and local contacts, not academic supervision.</li>
+          <li><strong>Data</strong> belong to the student for academic use; the association receives a copy for continuity between placements.</li>
+          <li><strong>Permits.</strong> The student applies for the COSTECH research permit and Tanzania Forest Service clearance; a letter from the institution is needed.</li>
+          <li><strong>Contact person</strong> for institutions: Ralf Degenhardt, {SITE.email}, {SITE.phone}.</li>
+          <li><strong>Site visits</strong> by supervisors are possible; accommodation in the main building at the rates above.</li>
+        </ul>
+        <p>More on Nilo as a field site, the research gap compared with Amani and possible topics: <a href="/institutes/">For institutes and research</a>.</p>
+      </div>
+      <div>
+        <span class="eyebrow">Downloads</span>
+        <div class="dl-list">
+          <a class="btn btn-line" href="/downloads/Nilo_Forest_Field_Placement.pdf">Announcement, English (PDF)</a>
+          <a class="btn btn-line" href="/downloads/Nilo_Forest_Feldaufenthalt_DE.pdf">Ausschreibung, Deutsch (PDF)</a>
+        </div>
+        <p class="small" style="margin-top:1rem">Both documents may be forwarded to students and posted on institutional placement lists.</p>
+      </div>
+    </div>
+  </div>
+</Base>

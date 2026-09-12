@@ -1,0 +1,21 @@
+---
+// DEFERRED: Spendenblock. Erst nach Vereinsgründung und Kontoeröffnung einbinden.
+// TODO: nach Gründung — Bankname, IBAN, BIC eintragen.
+import { SITE } from '../src/site';
+const bank = {
+  holder: `${SITE.name}, ${SITE.address.postalCode} ${SITE.address.locality}`,
+  name: '[Bank name]',
+  iban: 'CH00 0000 0000 0000 0000 0',
+  bic: '[BIC]',
+};
+---
+<div class="card">
+  <h3>Support the work</h3>
+  <p>Financial support is welcome and goes directly into protection on the ground.</p>
+  <p class="bank" style="font-family:monospace;font-size:.82rem;line-height:1.9;background:var(--mist);border-radius:4px;padding:1rem 1.2rem;display:inline-block">
+    {bank.holder}<br />
+    <b>Bank:</b> {bank.name}<br />
+    IBAN: {bank.iban}<br />
+    BIC: {bank.bic}
+  </p>
+</div>

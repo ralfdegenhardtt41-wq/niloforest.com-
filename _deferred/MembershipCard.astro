@@ -1,0 +1,9 @@
+---
+// DEFERRED: Mitgliedschaft. Erst nach Vereinsgründung (Statuten, Mitgliederbeitrag) einbinden.
+import { SITE } from '../src/site';
+---
+<div class="card">
+  <h3>Become a member</h3>
+  <p>Join the association. Members carry the initiative and receive field reports from the reserve.</p>
+  <a class="btn btn-line" href={`mailto:${SITE.email}?subject=${encodeURIComponent('Membership Friends of Nilo Forest')}`}>Enquire about membership</a>
+</div>

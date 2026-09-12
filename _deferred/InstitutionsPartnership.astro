@@ -1,0 +1,28 @@
+---
+// DEFERRED: Frühere Seite „Für Zoos & Institutionen" (Route #/zoos der alten Site).
+// Enthält Partnerschafts- und Förderangebote (Artenpatenschaft, Projektpartnerschaft),
+// die ohne Vereinskonto nicht angeboten werden. Zoo-Bezug laut Briefing entfernt halten.
+import { SITE } from '../src/site';
+---
+<section>
+  <div class="callout" style="flex-direction:column;align-items:flex-start">
+    <span class="eyebrow">For zoos, botanical gardens, museums and foundations</span>
+    <h2>A direct line into an Eastern Arc forest</h2>
+    <p>Many institutions hold Usambara species ex situ. Friends of Nilo Forest offers a straightforward way to support the same species in situ.</p>
+  </div>
+  <div class="s-head" style="margin-top:2.4rem"><span class="eyebrow">Why partner with us</span><h2>What a partnership offers</h2></div>
+  <div class="cards">
+    <div class="card"><h3>In situ meets ex situ</h3><p>Protect the wild populations behind the animals and plants in your collection.</p></div>
+    <div class="card"><h3>Education and storytelling material</h3><p>Field photography, footage and species notes from the reserve.</p></div>
+    <div class="card"><h3>A direct channel, little overhead</h3><p>No large apparatus between you and the forest.</p></div>
+    <div class="card"><h3>Credible, focused, scientific</h3><p>A single, well-defined forest and a clear conservation purpose.</p></div>
+  </div>
+  <div class="s-head" style="margin-top:2.4rem"><span class="eyebrow">Ways to work together</span><h2>Cooperation models</h2></div>
+  <div class="steps" style="grid-template-columns:repeat(4,1fr)">
+    <div class="step"><span class="n">Model 01</span><h3>Species sponsorship</h3><p>Sponsor a flagship species you hold.</p></div>
+    <div class="step"><span class="n">Model 02</span><h3>Project partnership</h3><p>Back a defined element of protection.</p></div>
+    <div class="step"><span class="n">Model 03</span><h3>Joint education formats</h3><p>Develop signage, exhibits or campaigns together.</p></div>
+    <div class="step"><span class="n">Model 04</span><h3>Talks and briefings</h3><p>Invite a talk for your team, members or visitors.</p></div>
+  </div>
+  <div class="callout" style="margin-top:2rem"><div><h3>Talk to us</h3><p>Ralf Degenhardt, contact for institutional partnerships.</p></div><a class="btn btn-solid" href={`mailto:${SITE.email}?subject=Partnership`}>{SITE.email}</a></div>
+</section>

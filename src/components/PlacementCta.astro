@@ -1,0 +1,19 @@
+---
+import { SITE, APPLY_HREF } from '../site';
+interface Props { title?: string; text?: string }
+const {
+  title = 'Field placement at Nilo Forest',
+  text = `Three to six months at the reserve boundary, own project, data for your thesis. Placements from ${SITE.placementStart}.`,
+} = Astro.props;
+---
+<div class="callout">
+  <div>
+    <span class="eyebrow">Currently sought: students for field placements</span>
+    <h3>{title}</h3>
+    <p>{text}</p>
+  </div>
+  <div style="display:flex;gap:.8rem;flex-wrap:wrap">
+    <a class="btn btn-solid" href="/field-placement/">Read the details</a>
+    <a class="btn btn-ghost" href={APPLY_HREF}>Apply by e-mail</a>
+  </div>
+</div>

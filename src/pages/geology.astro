@@ -1,0 +1,39 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+import ResearchBox from '../components/ResearchBox.astro';
+import PlacementCta from '../components/PlacementCta.astro';
+---
+<Base
+  title="Geology of the East Usambara Mountains – Eastern Arc"
+  description="Precambrian basement, block-faulting and a stable ocean-facing climate: why the Eastern Arc Mountains and the Nilo Nature Forest Reserve hold so many endemic species."
+>
+  <PageHead eyebrow="Why these mountains are so rich" title="Geology" lead="The high number of endemic species in the Usambaras is not an accident. It follows from old rock, tectonic isolation and a climate that has stayed moist for a very long time." />
+
+  <div class="section">
+    <div class="wrap">
+      <div class="timeline">
+        <span class="eyebrow ochre">Deep time, schematic</span>
+        <div class="tl-bar" aria-hidden="true"><span style="left:0">Precambrian basement</span><span style="left:60%">Block-faulting and uplift</span><span style="left:100%">Today</span></div>
+      </div>
+      <div class="cards three">
+        <div class="card"><span class="n">Foundation</span><h3>Ancient crystalline rock</h3><p>The Eastern Arc is carved from Precambrian metamorphic and crystalline basement, among the oldest rocks of East Africa.</p></div>
+        <div class="card"><span class="n">Isolation</span><h3>Sky islands</h3><p>Block-faulting lifted the range into steep, isolated massifs. Each became a forest island, and isolation is the classic driver of endemism.</p></div>
+        <div class="card"><span class="n">Stability</span><h3>An unbroken climate</h3><p>Facing the Indian Ocean, the mountains have caught moist sea winds for millions of years. The forests are regarded as refugia through global ice ages.</p></div>
+      </div>
+      <div class="prose" style="margin-top:2.6rem">
+        <h2>What this means at Nilo</h2>
+        <p>Nilo rises from the foothills to Nilo Peak at 1,506 m, the highest point of the East Usambaras. Rain falls in every month, 1,200 to 2,200 mm a year, and the reserve is the water catchment for more than 30,000 people in 17 villages. Slope, soil and cloud base shape where the forest belts lie and where clearing on the edge causes erosion. None of this has been measured at Nilo in recent years.</p>
+      </div>
+
+      <ResearchBox questions={[
+        'Slope, soil depth and forest structure: how do stand height and species composition vary with topography from the boundary to Nilo Peak?',
+        'Stream discharge and water quality across the catchment that supplies 17 villages, measured through a wet and a dry period.',
+        'Erosion and sediment on cleared edges compared with forested slopes, as an argument for boundary protection.',
+        'Micro-climate along an elevational transect: temperature, humidity and cloud base as drivers of the mossy forest belt.',
+      ]} />
+    </div>
+  </div>
+
+  <div class="section tint"><div class="wrap"><PlacementCta /></div></div>
+</Base>

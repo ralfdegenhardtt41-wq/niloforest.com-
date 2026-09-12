@@ -1,0 +1,24 @@
+---
+import { NAV, SITE, APPLY_HREF } from '../site';
+import Logo from './Logo.astro';
+const path = Astro.url.pathname;
+---
+<header class="masthead">
+  <div class="wrap masthead-in">
+    <a class="brand" href="/" aria-label={`${SITE.name} – home`}>
+      <Logo />
+      <span>
+        <span class="brand-name">{SITE.name}</span>
+        <span class="brand-sub">Nilo Nature Forest Reserve</span>
+      </span>
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
+    <label for="nav-toggle" class="burger" aria-label="Open menu"><span></span><span></span><span></span></label>
+    <nav class="primary" aria-label="Main navigation">
+      {NAV.map((n) => (
+        <a href={n.href} aria-current={path === n.href ? 'page' : undefined}>{n.label}</a>
+      ))}
+      <a class="apply" href={APPLY_HREF}>Apply</a>
+    </nav>
+  </div>
+</header>

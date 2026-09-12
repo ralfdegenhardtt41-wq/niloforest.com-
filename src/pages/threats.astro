@@ -1,0 +1,40 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+import ResearchBox from '../components/ResearchBox.astro';
+import PlacementCta from '../components/PlacementCta.astro';
+---
+<Base
+  title="Threats to the Nilo Forest Reserve – logging, poaching"
+  description="Illegal logging, poaching and encroachment are the main pressures on the Nilo Nature Forest Reserve, East Usambara. Nobody currently measures them. Open topics for a conservation thesis."
+>
+  <PageHead eyebrow="The pressures on the reserve" title="Threats" lead="The Nilo forest is not threatened by a single dramatic event but by steady, cumulative pressure. The three main pressures are known. Their extent, location and trend at Nilo are not." />
+
+  <div class="section">
+    <div class="wrap">
+      <div class="cards three">
+        <div class="card accent"><h3>Illegal logging</h3><p>Valuable hardwoods, camphorwood above all, are felled for timber. Cut stumps and pit-saw sites are the visible trace.</p></div>
+        <div class="card accent"><h3>Poaching</h3><p>Hunting with snares and the collection of rare reptiles, amphibians and birds put extra strain on species with small populations.</p></div>
+        <div class="card accent"><h3>Encroachment</h3><p>Clearing and burning for cultivation along the forest boundary eat slowly into the reserve, most of all in the lowland belt.</p></div>
+      </div>
+      <div class="cards" style="margin-top:1.4rem">
+        <div class="note" style="max-width:none">
+          <p><strong>Enforcement capacity is limited.</strong> The Tanzania Forest Service manages the reserve and holds the mandate to protect it. Its patrol capacity is limited, and there is no independent monitoring that would show where and how fast the pressures act. Friends of Nilo Forest works on that monitoring, in coordination with the Tanzania Forest Service.</p>
+        </div>
+        <div class="note" style="max-width:none">
+          <p><strong>The pressures have social and economic roots.</strong> For the people at the forest edge, timber, land and wild resources are a livelihood, not vandalism. Any monitoring that ignores the 17 villages around the reserve will not last.</p>
+        </div>
+      </div>
+
+      <ResearchBox questions={[
+        'Spatial pattern of illegal logging: mapping cut stumps and pit-saw sites along the boundary and inside the reserve, by species and distance from access points.',
+        'Snare density and distribution as a proxy for hunting pressure, repeated over the placement to detect change.',
+        'Encroachment rate: comparison of satellite imagery over recent years with ground-truthed boundary positions.',
+        'Drivers: a household survey in two or three neighbouring villages on fuelwood, timber, land and attitudes to the reserve.',
+        'Charcoal production around the reserve: kiln sites, wood sources and market routes.',
+      ]} />
+    </div>
+  </div>
+
+  <div class="section tint"><div class="wrap"><PlacementCta /></div></div>
+</Base>

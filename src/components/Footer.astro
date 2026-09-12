@@ -1,0 +1,45 @@
+---
+import { SITE } from '../site';
+import Logo from './Logo.astro';
+const year = new Date().getFullYear();
+---
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="/" style="text-decoration:none">
+          <Logo light size={42} />
+          <span class="brand-name">{SITE.name}</span>
+        </a>
+        <p style="margin-top:1rem;max-width:40ch">Swiss conservation association, in formation, for the Nilo Nature Forest Reserve in the East Usambara Mountains, Tanzania.</p>
+        <p style="margin-top:.4rem"><a href={`mailto:${SITE.email}`} style="display:inline;padding:0">{SITE.email}</a></p>
+      </div>
+      <div>
+        <h4>Field placement</h4>
+        <a href="/field-placement/">The placement</a>
+        <a href="/field-placement/#rates">Accommodation and contribution</a>
+        <a href="/field-placement/#faq">Questions and answers</a>
+        <a href="/field-placement/#credibility">Who we are</a>
+        <a href="/institutes/">For institutes</a>
+      </div>
+      <div>
+        <h4>The forest</h4>
+        <a href="/fauna/">Fauna</a>
+        <a href="/flora/">Flora</a>
+        <a href="/geology/">Geology</a>
+        <a href="/threats/">Threats</a>
+      </div>
+      <div>
+        <h4>Association</h4>
+        <a href="/approach/">Our approach</a>
+        <a href="/about/">About and contact</a>
+        <a href="/about/#legal">Legal notice and privacy</a>
+        <a href={SITE.lodgeUrl} target="_blank" rel="noopener">Nilo Forest Lodge (accommodation)</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© {year} {SITE.name} · {SITE.address.locality}, {SITE.address.country}</span>
+      <span>Nilo Nature Forest Reserve · East Usambara · Tanzania</span>
+    </div>
+  </div>
+</footer>
