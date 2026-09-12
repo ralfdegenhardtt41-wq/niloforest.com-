@@ -18,8 +18,8 @@ export const SITE = {
     { name: 'Benjamin Wagner', role: 'Co-founder' },
   ],
   lodgeUrl: 'https://www.niloforestlodge.com/',
-  // TODO: Starttermin — replace when the first intake date is fixed
-  placementStart: '[month/year]',
+  // Nutzerentscheidung 2026-09-12: Start ab sofort, laufende Aufnahme
+  placementStart: 'now',
   applySubject: 'Application: Field placement Nilo Forest',
   tagline:
     'Swiss conservation association for the Nilo Nature Forest Reserve, East Usambara Mountains, Tanzania. Self-directed field placements for biology, environmental and forestry students.',
