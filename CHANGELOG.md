@@ -99,8 +99,15 @@ Google bleiben der einzige externe Request.
 | 10 | **Reservatskoordinaten** ca. 4°55′ S, 38°40′ E (nur im JSON-LD) bestätigen | `src/site.ts` → `RESERVE.lat/lng` |
 | 11 | **Google Search Console** für niloforest.com einrichten und Sitemap einreichen | nach Deploy |
 
-### Deploy-Schritte (noch nicht ausgeführt)
-1. Branch `student-recruitment` prüfen (lokale Vorschau: `npm run build && npm run preview`).
-2. GitHub Pages auf Workflow-Build umstellen: `gh api -X PUT repos/ralfdegenhardtt41-wq/niloforest.com-/pages -f build_type=workflow`.
-3. Merge nach `main`; der Workflow baut und veröffentlicht.
-4. Nach dem Deploy: Lighthouse gegen https://niloforest.com/ wiederholen, Search Console, Backlink von niloforestlodge.com.
+### Deploy (ausgeführt 12.09.2026, Freigabe des Nutzers)
+1. GitHub Pages auf Workflow-Build umgestellt (`build_type=workflow`).
+2. `student-recruitment` per Fast-Forward nach `main` gemerged und gepusht; Workflow-Run 34703591079 erfolgreich.
+3. **Live seit 12.09.2026:** https://niloforest.com/ mit allen neuen URLs, robots.txt, Sitemap und PDFs (alle 200).
+4. Lighthouse mobil gegen die Live-Site: Performance 91, Accessibility 100, Best Practices 100,
+   SEO 100, LCP 2,8 s, 143 KiB (vorher 61 / 13,1 s / 9'102 KiB). Der Unterschied zur lokalen
+   Vorschau (98) liegt an der Netzwerklatenz von GitHub Pages und Google Fonts.
+
+### Offen nach dem Livegang
+- Google Search Console für niloforest.com einrichten, Sitemap einreichen.
+- Backlink von niloforestlodge.com auf niloforest.com/field-placement/.
+- Platzhalter 2–10 aus der Tabelle oben.
