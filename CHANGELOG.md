@@ -11,6 +11,12 @@
   fielen die Probleme des Waldes auf, daraus FONF.
 - Telefon +41 79 681 21 06, Adresse Chilegässli 12A, 8904 Aesch ZH.
 
+### Korrektur 12.09.2026 (Nutzer)
+- „Forest Base" war ein Missverständnis aus dem Briefing. Das Nebengebäude ist der **Annex**
+  der Nilo Forest Lodge: separates Gebäude, 15 m², Doppelbett, eigene Terrasse (wie auf
+  niloforestlodge.com). Alle Nennungen auf den Seiten und in beiden PDFs ersetzt.
+- Starttermin: ab sofort, laufende Aufnahme.
+
 ### Struktur
 - Astro 7, `@astrojs/sitemap`, `sharp`. Build `npm run build`, Vorschau `npm run preview`.
 - Seiten: `/`, `/field-placement/`, `/fauna/`, `/flora/`, `/geology/`, `/threats/`,

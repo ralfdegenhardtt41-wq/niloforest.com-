@@ -21,12 +21,12 @@ const programSchema = {
     '@type': 'Offer',
     price: '1200',
     priceCurrency: 'USD',
-    description: 'Contribution per month, full board, Forest Base single occupancy',
+    description: 'Contribution per month, full board, Annex single occupancy',
     availability: 'https://schema.org/InStock',
   },
   location: {
     '@type': 'Place',
-    name: 'Forest Base, Nilo Nature Forest Reserve boundary',
+    name: 'Annex of Nilo Forest Lodge, Nilo Nature Forest Reserve boundary',
     address: { '@type': 'PostalAddress', addressLocality: 'Misalai, Amani Division, Muheza District', addressRegion: 'Tanga Region', addressCountry: 'TZ' },
   },
 };
@@ -42,11 +42,11 @@ const faq = [
   },
   {
     q: 'How do I get there?',
-    a: 'Fly to Dar es Salaam or Kilimanjaro, then travel overland to Muheza in Tanga Region. From the tarmac road the last stretch to the Forest Base is about 1 hour 45 minutes on a rough track and needs a 4×4. We arrange the transfer from Muheza or Tanga by agreement; transfer costs are not included in the contribution.',
+    a: 'Fly to Dar es Salaam or Kilimanjaro, then travel overland to Muheza in Tanga Region. From the tarmac road the last stretch to the lodge is about 1 hour 45 minutes on a rough track and needs a 4×4. We arrange the transfer from Muheza or Tanga by agreement; transfer costs are not included in the contribution.',
   },
   {
     q: 'How safe is the site?',
-    a: 'The Forest Base is next to the main lodge building and is staffed. Saidi, the site manager, lives nearby and is your daily field partner. The site is remote: there are no shops, and the nearest medical care is in Muheza. Mobile network and internet work at the house. You will not be alone at the site, and you will not walk in the forest alone during the first weeks. We tell families exactly who is there and how to reach the site.',
+    a: 'The Annex is a separate building a few metres from the main house of the lodge, and the lodge is staffed. Saidi, the site manager, lives nearby and is your daily field partner. The site is remote: there are no shops, and the nearest medical care is in Muheza. Mobile network and internet work at the house. You will not be alone at the site, and you will not walk in the forest alone during the first weeks. We tell families exactly who is there and how to reach the site.',
   },
   {
     q: 'What is the climate like?',
@@ -66,11 +66,11 @@ const faq = [
   },
   {
     q: 'Can I come alone?',
-    a: 'Yes. Most placements will be single. You have your own room in the Forest Base, staff are on site, and Saidi works with you every field day. Places are limited to one or two participants at a time.',
+    a: 'Yes. Most placements will be single. You have the Annex to yourself, staff are on site, and Saidi works with you every field day. Places are limited to one or two participants at a time.',
   },
   {
     q: 'Can I bring a partner or companion?',
-    a: 'Yes. The Forest Base rate with a companion is USD 1,800 per month full board. The companion has no work obligation and no data rights under the placement; the placement, the project and the data are yours.',
+    a: 'Yes. The Annex rate with a companion is USD 1,800 per month full board. The companion has no work obligation and no data rights under the placement; the placement, the project and the data are yours.',
   },
   {
     q: 'Who supervises my work?',
@@ -82,7 +82,7 @@ const faq = [
   },
   {
     q: 'Can my family visit?',
-    a: 'Yes. Relatives, supervisors and small groups can stay in the main lodge building during the placement. Student rates apply only to the Forest Base; the main building is charged at the rates listed under accommodation. The lodge is open all year.',
+    a: 'Yes. Relatives, supervisors and small groups can stay in the main lodge building during the placement. Student rates apply only to the Annex; the main building is charged at the rates listed under accommodation. The lodge is open all year.',
   },
   {
     q: 'What does the placement cost compared with studying in Switzerland?',
@@ -140,7 +140,7 @@ const faqSchema = {
       <div class="factsheet">
         <span class="eyebrow">Location</span>
         <dl>
-          <dt>Base</dt><dd>Forest Base at the reserve boundary, near Misalai, Amani Division, Muheza District, Tanga Region</dd>
+          <dt>Base</dt><dd>Annex of the Nilo Forest Lodge at the reserve boundary, near Misalai, Amani Division, Muheza District, Tanga Region</dd>
           <dt>Access</dt><dd>1 h 45 min of rough track from the tarmac road, 4×4 required</dd>
           <dt>Nearest town</dt><dd>Muheza, with medical care</dd>
           <dt>Forest access</dt><dd>On foot from the house</dd>
@@ -174,9 +174,9 @@ const faqSchema = {
     <div class="wrap split">
       <div>
         <span class="eyebrow">What is provided</span>
-        <h2 style="font-size:clamp(1.8rem,3.2vw,2.5rem);margin-bottom:1rem">Forest Base, full board, field partner</h2>
+        <h2 style="font-size:clamp(1.8rem,3.2vw,2.5rem);margin-bottom:1rem">The Annex, full board, field partner</h2>
         <ul style="max-width:60ch">
-          <li><strong>Forest Base.</strong> A simple house next to the main lodge building, your own room. Direct access to the reserve boundary on foot.</li>
+          <li><strong>The Annex.</strong> A separate 15 m² building next to the main house of the lodge, with a double bed and its own terrace. Direct access to the reserve boundary on foot.</li>
           <li><strong>Full board</strong> prepared by lodge staff: three meals a day, drinking water.</li>
           <li><strong>Saidi</strong>, local guide and site manager, as your daily field partner. Swahili and basic English.</li>
           <li><strong>Internet</strong>, mobile broadband around 20 Mbps. Grid electricity with solar backup. Laundry.</li>
@@ -202,20 +202,20 @@ const faqSchema = {
     <div class="wrap">
       <div class="s-head">
         <span class="eyebrow">Accommodation and contribution</span>
-        <h2>Student rates, Forest Base</h2>
-        <p class="lead">The accommodation is the Nilo Forest Lodge. Placement students stay in the Forest Base, the lodge's annex. Description and photographs of the lodge are on <a href={SITE.lodgeUrl} target="_blank" rel="noopener">niloforestlodge.com</a>. Special conditions apply to placement students; regular rates are on niloforestlodge.com.</p>
+        <h2>Student rates, Annex</h2>
+        <p class="lead">The accommodation is the Nilo Forest Lodge. Placement students stay in the Annex, a separate 15 m² building with a double bed and its own terrace. Description and photographs of the lodge are on <a href={SITE.lodgeUrl} target="_blank" rel="noopener">niloforestlodge.com</a>. Special conditions apply to placement students; regular rates are on niloforestlodge.com.</p>
       </div>
       <div class="table-wrap">
         <table class="rates">
-          <caption>Forest Base, per month, full board</caption>
+          <caption>Annex, per month, full board</caption>
           <thead><tr><th>Occupancy</th><th class="num">Contribution per month</th></tr></thead>
           <tbody>
-            <tr><td>Forest Base, single occupancy</td><td class="num">USD 1,200</td></tr>
-            <tr><td>Forest Base, with companion <sup>1</sup></td><td class="num">USD 1,800</td></tr>
+            <tr><td>Annex, single occupancy</td><td class="num">USD 1,200</td></tr>
+            <tr><td>Annex, with companion <sup>1</sup></td><td class="num">USD 1,800</td></tr>
           </tbody>
         </table>
       </div>
-      <p class="small"><sup>1</sup> The companion has no work obligation and no data rights under the placement. For stays shorter than one month in the Forest Base a daily rate of USD 40 applies. The contribution is not negotiable.</p>
+      <p class="small"><sup>1</sup> The companion has no work obligation and no data rights under the placement. For stays shorter than one month in the Annex a daily rate of USD 40 applies. The contribution is not negotiable.</p>
 
       <div class="table-wrap" style="margin-top:2rem">
         <table class="rates secondary">
@@ -234,7 +234,7 @@ const faqSchema = {
         <div class="card">
           <h3>Included</h3>
           <ul>
-            <li>Own room in the Forest Base</li>
+            <li>The Annex to yourself: 15 m², double bed, own terrace</li>
             <li>Three meals a day and drinking water</li>
             <li>Electricity with solar backup</li>
             <li>Internet, around 20 Mbps</li>
@@ -353,16 +353,16 @@ const faqSchema = {
           </ul>
         </div>
         <div class="card">
-          <h3>Forest Base and surroundings</h3>
+          <h3>The Annex and surroundings</h3>
           <div class="photo-grid">
-            <div class="photo-ph">Forest Base, exterior<br />1200 × 900 px</div>
-            <div class="photo-ph">Student room<br />1200 × 900 px</div>
+            <div class="photo-ph">Annex and terrace<br />1200 × 900 px</div>
+            <div class="photo-ph">Annex, interior<br />1200 × 900 px</div>
             <div class="photo-ph">Kitchen and meals<br />1200 × 900 px</div>
             <div class="photo-ph">Access track<br />1200 × 900 px</div>
             <div class="photo-ph">Reserve boundary<br />1200 × 900 px</div>
             <div class="photo-ph">Field partner Saidi<br />1200 × 900 px</div>
           </div>
-          <!-- TODO: sechs Fotos Forest Base (Aussen, Zimmer, Küche, Zufahrt, Reservatsgrenze, Saidi), je 1200x900 px, in src/assets/images/base/ -->
+          <!-- TODO: sechs Fotos (Annex mit Terrasse, Annex innen, Küche/Mahlzeiten, Zufahrt, Reservatsgrenze, Saidi), je 1200x900 px, in src/assets/images/base/. Annex-Fotos können von niloforestlodge.com übernommen werden. -->
           <p class="small" style="margin-top:.8rem">Photographs of the main lodge building are on <a href={SITE.lodgeUrl} target="_blank" rel="noopener">niloforestlodge.com</a>.</p>
         </div>
       </div>
