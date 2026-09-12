@@ -88,7 +88,7 @@ Google bleiben der einzige externe Request.
 | Nr. | Was | Wo |
 |---|---|---|
 | 1 | ~~Starttermin~~ erledigt 12.09.2026: „start possible now, rolling intake" auf allen Seiten und in beiden PDFs | – |
-| 2 | **Fotos Gründer** Ralf Degenhardt, Benjamin Wagner, Hochformat 400×500 px | `src/pages/field-placement.astro` und `about.astro`, Kommentar `TODO: Foto` |
+| 2 | **Foto Benjamin Wagner**, Hochformat 400×500 px (Foto Ralf Degenhardt eingefügt 12.09.2026) | `src/pages/field-placement.astro` und `about.astro`, Kommentar `TODO: Foto` |
 | 3 | **Sechs Fotos** (Annex mit Terrasse, Annex innen, Küche/Mahlzeiten, Zufahrt, Reservatsgrenze, Saidi), je 1200×900 px; Annex-Fotos können von niloforestlodge.com übernommen werden | `src/pages/field-placement.astro`, Block „The Annex and surroundings"; Ablage `src/assets/images/base/` |
 | 4 | **Foto Angola-Stummelaffe** 720×540 px mit Lizenz | `src/pages/fauna.astro` |
 | 5 | **Nach Gründung:** Handelsregister-Nummer, Statuten (PDF), Gründungsdatum; Rechtsform in `src/site.ts` → `legalForm` anpassen | `about.astro`, `field-placement.astro`, `site.ts` |

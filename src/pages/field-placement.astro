@@ -1,6 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
 import { SITE, RESERVE, APPLY_HREF } from '../site';
+import { Image } from 'astro:assets';
+import ralf from '../assets/images/founders/ralf-degenhardt.jpg';
 
 const programSchema = {
   '@context': 'https://schema.org',
@@ -317,8 +319,7 @@ const faqSchema = {
           <h3>Founders</h3>
           <div class="founders">
             <div class="founder">
-              <div class="photo">Photo<br />Ralf Degenhardt<br />400 × 500 px</div>
-              <!-- TODO: Foto Ralf Degenhardt (Hochformat, 400x500 px, WebP) -->
+              <div class="photo" style="border:0"><Image src={ralf} alt="Ralf Degenhardt, founder of Friends of Nilo Forest" width={192} height={240} format="webp" quality={78} loading="lazy" /></div>
               <div><h4>Ralf Degenhardt</h4><p>Founder. Contact for placements, applications and families.</p></div>
             </div>
             <div class="founder">

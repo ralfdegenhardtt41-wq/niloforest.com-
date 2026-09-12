@@ -2,6 +2,8 @@
 import Base from '../layouts/Base.astro';
 import PageHead from '../components/PageHead.astro';
 import { SITE, APPLY_HREF } from '../site';
+import { Image } from 'astro:assets';
+import ralf from '../assets/images/founders/ralf-degenhardt.jpg';
 ---
 <Base
   title="About Friends of Nilo Forest – association and contact"
@@ -18,8 +20,7 @@ import { SITE, APPLY_HREF } from '../site';
         <h2>Founders</h2>
         <div class="founders">
           <div class="founder">
-            <div class="photo">Photo<br />Ralf Degenhardt<br />400 × 500 px</div>
-            <!-- TODO: Foto Ralf Degenhardt (Hochformat, 400x500 px) -->
+            <div class="photo" style="border:0"><Image src={ralf} alt="Ralf Degenhardt, founder of Friends of Nilo Forest" width={192} height={240} format="webp" quality={78} loading="lazy" /></div>
             <div><h4>Ralf Degenhardt</h4><p>Founder. Contact for placements, institutions and families. Switzerland and Tanzania.</p></div>
           </div>
           <div class="founder">
